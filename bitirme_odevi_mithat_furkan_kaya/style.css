@@ -1,0 +1,244 @@
+/*
+project name: My Page 
+project date: 25.06.2022
+project author: Mithat Furkan Kaya
+project version: v.1
+*/
+
+    /* Common properties */
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  p {
+  
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    text-align: justify;
+  }
+
+  .line_clamp3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line_clamp4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line_clamp5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line_clamp6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line_clamp7 {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line_clamp8 {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+
+   /* Navigation Stills */
+
+   .general-navigation {
+    opacity: 0.89;
+    background-color: rgb(0, 100, 255);
+   }
+
+   .navigation-menu-ıtems {
+    margin-left: 7%;
+    padding: 10px;
+   }
+
+   /* Header Stills */
+
+   header {
+    background-image: url('images/bg-image.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+    height: 41rem;
+    padding-top: 10rem;
+  }
+
+  /* Section1 Stills */
+
+  .star-checked {
+    color: orange;
+  }
+
+  .bs-icon-purple {
+    color: #6f42c1;
+  }
+
+  #ability {
+    margin: 5rem 0;
+  }
+
+  #ability .card {
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.8);
+  }
+  
+  #ability .card:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .card-text {
+    word-break: break-all;
+  }
+
+  /* Section2 Stills */
+
+#experiences {
+  padding: 3rem;
+  background-color: rgb(0, 130, 255);
+  z-index: -1;
+  opacity: 0.95;
+}
+
+/* Section3 Stills */
+
+#education-carousel {
+  padding: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Section4 Stills */
+
+.parallax-image{
+  background-color:transparent;
+  background-image: url('images/parallax_image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height:32.5rem;
+  padding:2.5rem;
+  z-index: -1;
+}
+
+.profile-photo {
+  width: 250px;
+  border-radius: 50%;
+  margin-left: 13%;
+}
+
+.ob-social-media {
+  margin-left: 13%;
+}
+
+/* Section5 Stills */
+
+#card-structure .card {
+  margin-bottom: 2rem;
+  border-radius: 2%;
+  margin-right: 2%;
+}
+
+#card-structure .card > img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Section6 Stills */
+
+#area-code {
+  width: 100%;
+  height: 100%;
+}
+
+#section-6 {
+  background-color: rgb(0, 130, 255);
+}
+
+/* Footer Stills  */
+
+#footer_menu> a {
+  margin: 1rem 0rem 0rem 0.7rem;
+  padding:0 0 1rem 0;
+}
+
+#footer_technologies_column>ul>li {
+  color: black;
+  margin: 0.30rem 0rem 0rem 0.30rem;
+
+}
+
+#social_media_id {
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+/* Back to top Stills */
+
+#back-to-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 5.1rem;
+  height: 3.4rem;
+  padding:1rem 0.5rem 1rem 0.5rem;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.5rem;
+  opacity: 0.75;
+}
+
+#back-to-top:hover {
+  width: 5.3rem;
+  height: 3.5rem;
+  opacity: 0.9;
+}
+
+/* Register Modal  */
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.error2 {
+  font-size: 0.8rem;
+  color: red;
+}
+
+
+
+
+  
+

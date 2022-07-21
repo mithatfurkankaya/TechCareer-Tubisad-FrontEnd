@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>My Page</title>
+    <!-- SEO -->
+    <meta name="author" content="Mithat Furkan Kaya">
+    <meta name="keywords" content="HTML5, CSS3, Bootstrap, JavaScript, Jquery, React">
+    <meta name="description" content="one page, HTML, CSS, JavaScript, Jquery, UI Design">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fascinate&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/c95e38852a.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap v5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="animate.min.css">
+
+    <!-- wow.js -->
+    <script src="wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg fixed-top general-navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://github.com/mithatfurkankaya" target="_blank"><i class="fa-brands fa-github fa-2x ms-5 text-light"></i></a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navigation-menu-ıtems" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light me-1" href="#ability"><i class="fa-solid fa-memory me-1 text-warning"></i>Yetenekler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light me-1" href="#experiences"><i class="fa-solid fa-e me-1 text-warning"></i>Deneyimler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light me-1" href="#education-carousel"><i class="fa-solid fa-school me-1 text-warning"></i>Eğitim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light me-1" href="#parallax"><i class="fa-solid fa-circle-user me-1 text-warning"></i>Biyografi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light me-1" href="#card-structure"><i class="fa-solid fa-laptop-file me-1 text-warning"></i>Çalışma Alanları</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light me-1" href="#section-6"><i class="fa-solid fa-address-card me-1 text-warning"></i>İletişim</a>
+          </li>
+        </ul>
+      </div>
+          
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Arama" aria-label="Search">
+        </form>
+        
+        <div class="d-flex align-items-center me-5" id="right_navbar">
+        <button data-bs-toggle="modal" data-bs-target="#modelId" type="button"
+            class="btn btn-link px-3 me-2">
+            <i class="fa-solid fa-user-large" style="color:#ffca04"></i>
+        </button>
+        <button data-bs-toggle="modal" data-bs-target="#registerId" type="button"
+            class="btn btn-primary btn-sm me-3">
+            Kayıt Ol
+        </button>
+    </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+   <!-- Login Modal Start -->
+   <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title ms-1">Giriş Yap</h6>
+                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formLogin" name="form_Login" action="#">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1"> <label class="form-label" for="user_email">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </label></div>
+                                <div class="col input-control">
+                                    <input type="e-mail" id="user_email" name="user_email" placeholder="e-mail adresinizi giriniz" class="form-control" />
+                                    <span id="validation_email" class="text-danger error-2" style="font-size:.8rem ;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1"> <label class="form-label" for="user_password">
+                                        <i class="fa-solid fa-key"></i>
+                                    </label></div>
+                                <div class="col input-control">
+                                    <input type="password" id="user_password" name="user_password" placeholder="Şifrenizi giriniz" class="form-control" />
+                                    <span id="validation_password" class="text-danger error-2" style="font-size:.8rem ;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-outline mt-2 mb-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1"> <label class="form-label" for="form2Example1">
+                                    </label></div>
+                                <div class="col">
+                                    <button type="reset" class="btn btn-outline-danger me-2 my-1">Temizle</button>
+                                    <button id="btnSubmit" type="submit" class="btn btn-outline-primary my-1">Giriş
+                                        Yap</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+            </div>
+            </div>
+            </div>
+</div>
+<!-- Login Modal End -->
+
+
+<!-- Register Modal Start -->
+<div class="modal fade" id="registerId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ms-1">Kayıt Ol</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <form action="#" id="form">
+                <div class="row">
+                    <div class="col-md-6 mt-1 input-control">
+                        <input id="fname" name="fname" type="text" placeholder="Adınızı giriniz" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <div class="col-md-6 mt-1 input-control">
+                        <input id="surname" name="surname" type="text" placeholder="Soyadınızı giriniz" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <div class="col-md-12 mt-2 input-control">
+                        <input id="email" name="email" type="email" placeholder="e-mail adresinizi giriniz" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <div class="col-md-12 mt-2 input-control">
+                      <input id="rpassword" name="rpassword" type="password" placeholder="Şifrenizi giriniz" class="form-control">
+                      <div class="error"></div>
+                  </div>
+                  <div class="col-md-12 mt-2 input-control">
+                    <input id="rpassword2" name="rpassword2" type="password" placeholder="Tekrar şifrenizi giriniz" class="form-control">
+                    <div class="error"></div>
+                </div>
+
+                    <div class="modal-footer mt-3 border-0">
+                      <button type="submit" class="btn btn-primary ms-1">Kaydet</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Register Modal End -->
+
+
+
+<!-- Header Start -->
+<header id="header">
+  <div class="jumbotron text-white">
+      <div class="container" style="opacity:0.9">
+          <div class="text-center">
+              <h1 class="text-uppercase display-3 wow bounceInLeft animated" data-wow-delay="0.30s">Mithat Furkan Kaya</h1>
+              <h3 class=" my-5 wow bounceInRight animated" data-wow-delay="0.40s">Frontend Web Developer</h3>
+              <a class="btn btn-outline-warning my-3 shadow wow bounceInUp animated" data-wow-delay="0.50s" href="images/Özgeçmiş Formu.pdf" target="_blank">Özgeçmişimi inceleyebilirsiniz</a>
+          </div>
+      </div>
+  </div>
+</header>
+<!-- Header End -->
+
+<!-- Section1 Start -->
+<section id="ability">
+  <div class="container">
+    <p class="text-uppercase display-6 text-center text-dark mb-4"><strong>Yetenekler</strong></p>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card p-2 m-2 wow fadeInLeftBig animated" data-wow-delay="0.25s">
+          <i class="fa-brands fa-html5 text-center text-danger fa-10x"></i>
+          <div class="card-body ">
+              <h4 class="card-title text-uppercase text-center">HTML5</h4>
+              <p class="card-text  line_clamp5">HTML web sayfalarının iskeletini oluşturmak için kullanılan standart metin işaretleme dilidir. Dilin son sürümü HTML5'tir. HTML bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar yazılabilir.</p>
+                 <div class="text-center mt-4" ıd="star-rating">
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                 </div>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-2 m-2 wow fadeInDownBig animated" data-wow-delay="0.30s">
+          <i class="fa-brands fa-css3 text-center text-primary fa-10x"></i>
+          <div class="card-body ">
+              <h4 class="card-title text-uppercase text-center">CSS3</h4>
+              <p class="card-text  line_clamp5 justify-content-start">Cascading Style Sheets kısaca CSS web sayfalarının daha estetik görünmesi için font boyutu, renk, elementlerin büyüklüğü ve daha birçok parametreyi kontrol etmemize olanak sağlayan bir işaretleme dilidir.</p>
+                 <div class="text-center mt-4" ıd="star-rating">
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                 </div>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-2 m-2 wow fadeInDownBig animated" data-wow-delay="0.30s">
+          <i class="fa-brands fa-bootstrap text-center bs-icon-purple fa-10x"></i>
+          <div class="card-body ">
+              <h4 class="card-title text-uppercase text-center">Bootstrap5</h4>
+              <p class="card-text  line_clamp5 justify-content-around">Bootstrap geliştiricilere hazır yapılar sunan bir CSS kütüphanesidir. Zengin yapısı sayesinde hem web sitelerinin içeriğini düzenlememize yardımcı olur hem de sunduğu hazır componentlerle tekrara düşmemizi engeller.</p>
+                 <div class="text-center mt-4" ıd="star-rating">
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                 </div>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-2 m-2 wow fadeInRightBig animated" data-wow-delay="0.25s">
+          <i class="fa-brands fa-js text-center text-warning fa-10x"></i>
+          <div class="card-body ">
+              <h4 class="card-title text-uppercase text-center">JavaScript</h4>
+              <p class="card-text  line_clamp5">JavaScript interaktif web sayfaları tasarlamak için kullanılan www'nin temel yapı taşı olan programlama dilidir. Web sitelerinin %97'sinden fazlası, web sayfası hareketleri için istemci tarafında JavaScript kullanırlar. Tüm büyük web tarayıcılarında, kaynak kodunu kullanıcıların cihazlarında yürütebilmek için özel bir JavaScript motoru bulunur.</p>
+                 <div class="text-center mt-4" ıd="star-rating">
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star star-checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                 </div>
+          </div>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Section1 End -->
+
+<!-- Section2 Start -->
+<section id="experiences">
+  <div class="container mb-3">
+    <div class="text-z">
+    <p class="text-uppercase display-6 text-center text-dark mb-5 wow rubberBand animated"><strong>Deneyimler</strong></p>
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="text-center mb-3"><b>Tunçman Mühendislik</b></h3>
+        <p class="mb-3 justify-content-center">Tunçman Mühendislik yapı elektrik tesisatı, elektrik sistemlerinin bakım ve onarımı, elektrik tesislerinin kurulumu ve devreye alınması, proje danışmanlığı gibi alanlarda hizmet veren bir firmadır. Tunçman Mühendislikte lisans eğitimim sırasında 2 ay süreyle stajyer olarak çalıştım. Bu sürede proje yönetimi, iş takibi ve disiplini gibi konularda deneyim kazandım ve saha tecrübesi edindim.</p>
+        <span class="ms-3"><strong>Unvan:</strong></span>
+        <span class="ms-1">Stajyer</span><br>
+        <span class="ms-3"><strong>Süre:</strong></span>
+        <span class="ms-1">2 ay</span><br>
+        <span class="ms-3"><strong>Yer:</strong></span>
+        <span class="ms-1">Bursa</span>
+      </div>
+      <div class="col-md-6">
+        <img src="images/elektrik_müh.jpg" width="550px" alt="Deneyimler-Resim1">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <img src="images/otomasyon_müh.jpg" width="550px" alt="Deneyimler-Resim2">
+      </div>
+      <div class="col-md-6">
+        <h3 class="text-center mb-3"><b>Targe Endüstriyel Otomasyon Sistemleri</b></h3>
+        <p class="mb-3 justify-content-center">Targe Endüstriyel Otomasyon Sistemleri, endüstriyel üretimde kullanılan otomasyon cihazlarının tasarlanması ve devreye alınması, otomasyon sistemlerinin takibine yönelik cihazların devreye alınması, danışmanlık, otomasyon sistemlerine yönelik yazılım geliştirme gibi hizmetler sunan bir firmadır. Targe Otomasyonda 2 ay süreyle stajyer olarak çalıştım. Otomasyon Sistemleri, iş takibi ve disiplini gibi konularda tecrübe edindim.</p>
+        <span class="ms-3"><strong>Unvan:</strong></span>
+        <span class="ms-1">Stajyer</span><br>
+        <span class="ms-3"><strong>Süre:</strong></span>
+        <span class="ms-1">2 ay</span><br>
+        <span class="ms-3"><strong>Yer:</strong></span>
+        <span class="ms-1">Bursa</span>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- Section2 End -->
+
+<!-- Section3 Start -->
+<section id="education-carousel">
+  <p class="text-uppercase display-6 text-center text-dark mb-4"><strong>Eğitim</strong></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div id="uludag_text" class="p-2">
+        <h4 class="text-center wow bounce animated" data-wow-delay="0.25sn">Uludağ Üniversitesi<br> Elektrik Elektronik Mühendisliği Bölümü</h4>
+      <p class="justify-content-center">2015 senesinde Uludağ Üniversitesi Elektrik Elektronik Mühendisliği Bölümünde lisans eğitimeme başladım. 2021 senesinde <b>2.60/4.00</b> genel akademik not ortalaması ile mezun oldum.</p>
+      </div>
+      <div id="gol_text" class="mt-2 p-2">
+        <h4 class="text-center wow bounce animated" data-wow-delay="0.25sn">Göl Anadolu Öğretmen Lisesi</h4>
+      <p class="justify-content-center">Lise eğitimime 2010 senesinde Göl Anadolu Öğretmen Lisesinde başladım. 2014 senesinde <b>	84.35/100</b> not ortalaması ile mezun oldum.</p>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner ms-3">
+          <div class="carousel-item active">
+            <img src="images/uludag_uni.jpg" class="d-block w-100"  height="360" alt="Uludağ Üniversitesi">
+          </div>
+          <div class="carousel-item">
+            <img src="images/gol_aol.jpg" class="d-block w-100"  height="360" alt="Göl Anadolu Öğretmen Lisesi">
+          </div>
+          <div class="carousel-item">
+            <img src="images/inönü_ilkögretim.jpg" class="d-block w-100" height="360" alt="İnönü İO">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Section3 End -->
+
+<!-- Section4 Start - Parallax İmage -->
+<section id="parallax" class="parallax-image pt-5 pb-3 mb-5">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 class="text-center mb-3">Otobiyografi</h2>
+          <p class="text-dark justify-content-center" style="font-size:18px">12 Haziran 1996 yılında Sinop'un Ayancık ilçesinde dünyaya geldim. İlköğrenimimi doğduğum ilçedeki İnönü İlköğretim Okulunda tamamladım. Lise eğitimimi ise Kastamonu Göl Anadolu Öğretmen Lisesinde sayısal alanında tamamladım. 2015 senesinde Uludağ Üniversitesi Mühendislik Fakültesi Elektrik-Elektronik Mühendisliği Bölümünde lisans eğitimime başladım. Ağırlıklı olarak elektronik ve haberleşme dersleri aldığım lisans eğitimimi 2021 senesinde tamamladım. Mezuniyet sonrasında kariyerimi daha önceden de aşina olduğum yazılım geliştirme alanında devam ettirmeye karar verdim ve bu maksatla eğitimlere katılmaya başladım. Katıldığım bu eğitimler genellikle Frontend Web Development alanındaydı. Şuan Sinopta yaşıyorum ve online eğitimlere katılmaya devam ediyorum.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/profil_foto.jpg" class="profile-photo" alt="Profil Fotom">
+        <div id="social_media" class="mt-4 ob-social-media wow bounceInUp animated" data-wow-delay="0.10s">
+          <a href="https://www.linkedin.com/in/mithatfurkankaya/" target="_blank" class="me-2 btn btn-outline-primary text-reset btn-floating">
+              <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/furkankaya57/" target="_blank" class="me-2 btn btn-outline-danger text-reset btn-floating">
+              <i class="fa-brands fa-instagram-square"></i>
+          </a>
+          <a href="https://twitter.com/KAYA__57" target="_blank" class="me-2 btn btn-outline-info text-reset btn-floating">
+              <i class="fa-brands fa-twitter"></i>
+          </a> <a href="mailto:furkan_96_57@hotmail.com" target="_blank" class="me-2 btn btn-outline-success text-reset btn-floating">
+              <i class="fa-brands fa-google"></i>
+          </a> <a href="https://github.com/mithatfurkankaya" target="_blank" class="me-2 btn btn-outline-light text-reset btn-floating">
+              <i class="fa-brands fa-github"></i>
+          </a>
+      </div>
+      </div>
+    </div>  
+    </div>
+</section>
+<!-- Section4 End -->
+
+<!-- Section5 Start -->
+<section id="card-structure" class="py-2 mt-2 mb-5">
+  <p class="text-uppercase display-6 text-center text-dark mb-4 z-paragraf"><strong>Çalışma Alanları</strong></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 wow animated rotateInDownLeft" data-wow-delay="0.05s">
+        <div class="card">
+            <img class="card-img-top" src="images/yazilim_gelistirme.jpg" alt="Yazılım Geliştirme">
+            <div class="card-body">
+                <h4 class="card-title my-2 text-center">Yazılım Geliştirme</h4>
+                <p class="card-text justify-content-center line_clamp6">Yazılım geliştirme, gereksinim duyulan bilgisayar programlarının, yazılımların farklı teknolojiler kullanılarak geliştirilmesidir. Bilgisayar programlarının hayatın hemen hemen her alanına yayılmasıyla yazılım geliştirme de multidisipliner bir yapıya dönüşmüştür. Bu sebeple kendi içinde web uygulamarı geliştirme, mobil geliştirme gibi farklı alanlara ayrılmıştır.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 wow animated rotateInDownLeft"  data-wow-delay="0.05s">
+        <div class="card">
+            <img class="card-img-top" src="images/enerji_sistemleri_müh.jpg" height="200px" alt="Enerji Sistemleri">
+            <div class="card-body">
+                <h4 class="card-title my-2 text-center">Enerji Sistemleri</h4>
+                <p class="card-text justify-content-center line_clamp6">Enerji sistemleri mühendisi, var olan enerji kaynaklarını çevresel etkileri de göz önünde bulundurarak en düşük maliyetle kullanılabilir hale getiren bir mühendislik dalıdır.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 wow animated rotateInDownLeft"  data-wow-delay="0.05s">
+      <div class="card">
+          <img class="card-img-top" src="images/proje_mühendisligi.png" height="200px" alt="Proje Yönetimi">
+          <div class="card-body">
+              <h4 class="card-title my-2 text-center">Proje Yönetimi</h4>
+              <p class="card-text justify-content-center line_clamp6">Elektrik enerjisinin kullanımını ve dağıtılmasını daha verimli kılan; üretimin daha kaliteli ve sorunsuz olmasını sağlayan, zaman kaybını en aza indirgeyip birim maliyetlerde esnekliğe olanak sağlayan bir mühendislik disiplinidir.</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3 wow animated rotateInDownLeft"  data-wow-delay="0.05s">
+    <div class="card">
+        <img class="card-img-top" src="images/veri_bilimi.jfif" height="200px" alt="Veri Bilimi">
+        <div class="card-body">
+            <h4 class="card-title my-2 text-center">Veri Bilimi</h4>
+            <p class="card-text justify-content-center line_clamp6">Veri bilimi; istatistikler, bilimsel yöntemler, yapay zeka ve veri analizi dahil olmak üzere birçok alanı birleştirerek verilerden değer elde etmeyi amaçlayan bir disiplindir.</p>
+        </div>
+    </div>
+</div>
+    </div>
+    <div id="card-structure-row-2" class="row mt-3">
+      <div class="col-md-3 wow animated rotateInDownLeft"  data-wow-delay="0.15">
+        <div class="card">
+            <img class="card-img-top" src="images/haberlesme_müh.jpg" height="195px" alt="Haberleşme Sistemleri">
+            <div class="card-body">
+                <h4 class="card-title my-2 text-center">Haberleşme Sistemleri</h4>
+                <p class="card-text justify-content-center line_clamp5">İletişim ve yayın sistemlerinin üretimini kavramsallaştıran, tasarlayan, test eden ve denetleyen bir mühendislik disiplinidir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 wow animated rotateInDownLeft" data-wow-delay="0.15">
+      <div class="card">
+          <img class="card-img-top" src="images/kontrol_otomasyon_müh.jpg" height="195px" alt="Kontrol Otomasyon Mühendisliği">
+          <div class="card-body">
+              <h4 class="card-title my-2 text-center">Otomasyon Sistemleri</h4>
+              <p class="card-text justify-content-center line_clamp5"> Bir sistemin  amaçlanan ve planlanan şekilde çalışması için gereken kontrol sistemlerini inceler. Otomasyon mühendislerinin amacı sistemlerin otomasyon yardımıyla çalışmasını sağlayıp yeni teknolojiler geliştirmektir.</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3 wow animated rotateInDownLeft" data-wow-delay="0.15">
+    <div class="card">
+        <img class="card-img-top" src="images/elektronik_müh.jpg" height="195px" alt="Elektronik Mühendisliği">
+        <div class="card-body">
+            <h4 class="card-title my-2 text-center">Elektronik Mühendisliği</h4>
+            <p class="card-text justify-content-center line_clamp5">Elektronik mühendisliği, zayıf elektrik akımlarının karakteristikleri, analog ve digital devre teknolojileri, elektromanyetik ve sinyal işleme teknolojilerini inceleyen mühendislik dalıdır.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 wow animated rotateInDownLeft" data-wow-delay="0.15">
+  <div class="card">
+      <img class="card-img-top" src="images/güc_sistemleri.jpg" height="200px" alt="Güc Sistemleri">
+      <div class="card-body">
+          <h4 class="card-title my-2 text-center">Güç Sistemleri</h4>
+          <p class="card-text justify-content-center line_clamp6"> Enerji kaynaklarının kullanılabilir hale getirilmesi sürecini inceleyen ve halihazırda, aktif olarak enerji üreten sistemlerden elde edilen verimi arttırmayı amaçlayan bir disiplindir.</p>
+      </div>
+  </div>
+</div>  
+    </div>
+  </div> 
+</section>
+<!-- Section5 End -->
+
+<!-- Section6 Start -->
+<section id="section-6" class="py-2 mb-5 pb-5">
+  <p class="text-uppercase display-6 text-center text-dark my-4 py-3"><strong>İletişim</strong></p>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <form action="#!" id="contact_form">
+                  <div class="row">
+                      <div class="col-md-6 mt-1">
+                          <input type="text" placeholder="Adınızı giriniz" class="form-control">
+                      </div>
+                      <div class="col-md-6 mt-1">
+                          <input type="text" placeholder="Soyadınızı giriniz" class="form-control">
+                      </div>
+                      <div class="col-md-12 mt-2">
+                          <input type="email" placeholder="e-mail adresinizi giriniz" class="form-control">
+                      </div>
+                      <div class="col-md-2 mt-2">
+                          <select name="area-code" id="area-code">
+                            <option value="turkey">+90</option>
+                            <option value="abd">+1</option>
+                            <option value="germany">+49</option>
+                            <option value="belgium">+32</option>
+                            <option value="denmark">+45</option>
+                            <option value="france">+33</option>
+                          </select>
+                      </div>
+                      <div class="col-md-10 mt-2">
+                          <input type="number" placeholder="Telefon numaranızı giriniz" class="form-control">
+                      </div>
+
+                      <div class="col-md-12 mt-2">
+                          <fieldset>
+                              <textarea name="message" rows="6" class="form-control" id="message"
+                                  placeholder="Mesajınızı yazın" required=""></textarea>
+                          </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                          <fieldset>
+                              <button type="reset" class="btn btn-danger mt-4 me-3 ms-1">Temizle</button>
+                              <button type="submit" class="btn btn-info mt-4">Gönder</button>
+                          </fieldset>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="col-md-6 pb-4">
+              <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5935.212804579715!2d34.58214922634609!3d41.94430836686806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x408f813862fac3df%3A0x8836bedf9cf3cb65!2zQXlhbmPEsWssIFlhbMSxLCA1NzQwMiBBeWFuY8Sxay9TaW5vcA!5e0!3m2!1str!2str!4v1658173617822!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Section6 End -->
+
+ <!-- Footer Start -->
+ <footer class="text-center text-lg-start border-top mt-5">
+<section id="footer-section-1">
+      <div class="container text-center text-md-start p-5 mt-4">
+          <div class="row mt-4">
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4 p-3 shadow">
+                <div id="footer_techcareer_logo" class="text-center">
+                  <img src="images/techcareer_logo.png" class="p-2" alt="techcareer logo">
+                </div>
+                <h6 class="text-uppercase my-3 p-1 text-center">Tübisad Frontend Bootcamp</h6>
+                  <p style="text-align:left!important" class="line_clamp6">
+                    Bu web sitesi, techcareer.net platformunun düzenlediği "Tübisad Frontend Bootcamp" eğitimi için tasarlanmıştır. 20.05.2022 tarihinde başlayan ve 6 hafta süren bootcamp süresince HTML, CSS, Bootstrap, Git Versiyon Kontrol Sistemi, JavaScript, Jquery, React teknolojilerine yönelik eğitim ve uygulama yapılmıştır. Bu web sitesi, bootcamp sürecinin bitirme projesi olarak tasarlanmıştır.
+                  </p>
+              </div>
+              <div class="col-md-3 col-lg-4 col-xl-3 mb-4 p-3 shadow">
+                <div id="footer_menu">
+                <h6 class=" my-3 p-1 text-center"><strong>Menü</strong></h6>
+                  <a href="#ability">Yetenekler</a><br>
+                  <a href="#experiences">Deneyimler</a><br>
+                  <a href="#education-carousel">Eğitim</a><br>
+                  <a href="#parallax">Biyografi</a><br>
+                  <a href="#card-structure">Çalışma Alanları</a>
+                </div>
+                </div>
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4 p-3 shadow">
+                  <div id="footer_technologies_column">
+                  <h6 class="my-3 p-1 text-center"><strong>Kullanılan Teknolojiler</strong></h6>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Bootstrap</li>
+                      <li>JavaScript</li>
+                      <li>Jquery</li>
+                      <li>React</li>
+                      <li>wow.js</li>
+                    </ul>
+                  </div>
+                  </div>
+                  <div class="col-md-3 col-lg-4 col-xl-3 mb-4 p-3 shadow">
+                    <div id="footer_contact">
+                    <h6 class=" my-3 p-1 text-center"><strong>İletişim Bilgileri</strong></h6>
+                    <p><i class="fa-solid fa-earth-europe me-2"></i><a href="#map">Türkiye</a></p>
+                    <p><i class="fa-solid fa-envelope me-2"></i>
+                        <a href="mailto:furkan_96_57@hotmail.com" target="_blank">furkan_96_57@hotmail.com</a>
+                    </p>
+                    <p><i class="fa-solid fa-mobile-screen me-2"></i>
+                        <a href="tel:905418416911">0541 841 69 11</a>
+                    </p>
+                    <p><i class="fa-solid fa-mobile-retro me-2"></i>
+                        <a href="tel:905417461257">0541 746 12 57</a>
+                    </p>
+                    </div>
+                    </div>
+                  
+          </div>
+      </div>
+  </section>
+
+  <div id="social_media_id" class="wow flash animated" data-wow-duration="0.5s">
+    <a href="https://www.linkedin.com/in/mithatfurkankaya/" target="_blank" class="me-2 btn btn-outline-primary text-reset btn-floating">
+      <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="https://www.instagram.com/furkankaya57/" target="_blank" class="me-2 btn btn-outline-danger text-reset btn-floating">
+      <i class="fa-brands fa-instagram-square"></i>
+  </a>
+  <a href="https://twitter.com/KAYA__57" target="_blank" class="me-2 btn btn-outline-info text-reset btn-floating">
+      <i class="fa-brands fa-twitter"></i>
+  </a> <a href="mailto:furkan_96_57@hotmail.com" target="_blank" class="me-2 btn btn-outline-success text-reset btn-floating">
+    <i class="fa-solid fa-envelope"></i>
+  </a> <a href="https://github.com/mithatfurkankaya" target="_blank" class="me-2 btn btn-outline-warning text-reset btn-floating">
+      <i class="fa-brands fa-github"></i>
+  </a>
+</div>
+
+<div class="text-center p-4 bg-light" id="copy_right">
+    &copy; ©2022 Copyright;
+    <p style="font-size: 20px;" class="mt-3 text-center">Mithat Furkan Kaya</p>
+</div>
+</footer>
+
+<!-- Footer End -->
+ 
+<!-- Back to top Start -->
+<a id="back-to-top" class="btn btn-warning btn-sm" href="#header"><i class="fa fa-angle-double-up fa-2x"></i></a>
+<!-- Back to top End -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- External JS -->
+    <script src="main.js"></script>
+</body>
+</html>
+
+
